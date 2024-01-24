@@ -28,6 +28,10 @@ export class LoginOneComponent {
     localStorage.removeItem('token'); // Borra el token al cargar la página del inicio de sesión
   }
 
+  testt(){
+    this._router.navigate(['mainIn']);
+  }
+
   login(event: Event): void {
     event.preventDefault();
 
@@ -39,7 +43,7 @@ export class LoginOneComponent {
     this._incentivosServices.login(this.usuario, this.clave).subscribe(
       () => {
         // Redirigir al componente de incentivos con el dni en los queryParams
-        this._router.navigate(['/incentivos']);
+        this._router.navigate(['mainIn/incentives']);
         this._disparadorDNI.disparadorDNI.emit({data:this.usuario});
       },
       error => {

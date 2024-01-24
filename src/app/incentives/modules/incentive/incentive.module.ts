@@ -4,6 +4,9 @@ import { IncentivesComponent } from './incentives/incentives.component';
 import { AwardsComponent } from './awards/awards.component';
 import { IncentiveRoutingModule } from './incentive-routing.module';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { IncentivesService } from '../../services/incentives.service';
+import { ToastrModule, ToastrService } from 'ngx-toastr';
+import { IncentiveTriggerService } from '../../core/triggers/incentive-trigger.service';
 
 
 
@@ -16,7 +19,18 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
     CommonModule,
     IncentiveRoutingModule,
     FormsModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    ToastrModule.forRoot({
+      timeOut: 4000,
+      positionClass: 'toast-bottom-right',
+      preventDuplicates: true,
+      closeButton: true, // Habilita el botón de cierre
+    })
+  ],
+  providers: [
+    IncentivesService
+    ,IncentiveTriggerService
+    // ,ToastrService
   ]
 })
 export class IncentiveModule { }
