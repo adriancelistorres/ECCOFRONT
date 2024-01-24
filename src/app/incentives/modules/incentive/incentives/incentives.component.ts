@@ -333,7 +333,7 @@ export class IncentivesComponent {
   
     if (!token) {
       // No hay token, redirigir a la página de inicio de sesión
-      this._router.navigate(['/incentivosLogin']);
+      this._router.navigate(['authIn']);
       return;
     }
   
@@ -350,7 +350,7 @@ export class IncentivesComponent {
       if (timeRemaining <= 0) {
         // Token expirado, redirigir a la página de inicio de sesión y borrar el token
         localStorage.removeItem('token');
-        this._router.navigate(['/incentivosLogin']);
+        this._router.navigate(['authIn']);
         return;
       }
   
@@ -361,7 +361,7 @@ export class IncentivesComponent {
           // Token expirado, borrar el token y mostrar la alerta de sesión expirada
           localStorage.removeItem('token');
           this.showSessionExpiredAlert();
-          this._router.navigate(['/incentivosLogin']);
+          this._router.navigate(['authIn']);
         }
       }, timeRemaining);
   
@@ -379,13 +379,13 @@ export class IncentivesComponent {
       icon: 'warning',
     }).then((result) => {
       // Redirigir al usuario a la página de inicio de sesión
-      this._router.navigate(['/incentivosLogin']);
+      this._router.navigate(['authIn']);
     });
   }
 
   cerrarSesion(): void {
     localStorage.removeItem('token');
-    this._router.navigate(['/incentivosLogin']);
+    this._router.navigate(['authIn']);
   }
 
 }

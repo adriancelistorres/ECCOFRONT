@@ -22,7 +22,7 @@ export class GuardianGuard implements CanActivate {
 
     if (!token) {
       // Si no hay token en el localStorage, redirige a la página de inicio de sesión
-      return this.router.parseUrl('/incentivosLogin');
+      return this.router.parseUrl('/authIn');
     }
 
     // Si hay token en el localStorage, permite el acceso a la ruta

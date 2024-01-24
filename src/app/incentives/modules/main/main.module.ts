@@ -15,17 +15,10 @@ import { ToastrModule, ToastrService } from 'ngx-toastr';
   imports: [
     CommonModule,
     MainRoutingModule,
-    HttpClientModule,
-    ToastrModule.forRoot({
-      timeOut: 4000,
-      positionClass: 'toast-bottom-right',
-      preventDuplicates: true,
-      closeButton: true, // Habilita el botón de cierre
-    })
+    HttpClientModule
   ],
   providers: [
     IncentivesService
-    // ,ToastrService
   ]
 })
 export class MainModule { }
