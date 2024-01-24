@@ -1,4 +1,4 @@
-<h5 class="card-title p-3">Ingresa tus credenciales</h5>
+<h5 class="card-title p-3">Selecciona País y Tipo</h5>
 <form [formGroup]="loginForm" (ngSubmit)="getLogin()">
     <div class="row mb-3">
         <div class="input-group">
@@ -18,7 +18,7 @@
                 <i class="bi bi-signpost-split"></i>
             </div>
             <select class="form-select" formControlName="type">
-                <option value="">Seleccionar Tipo</option>
+                <option value="">Seleccionar Tipo Usuario</option>
                 <option value="1">Socio</option>
                 <option value="2">Colaborador</option>
             </select>
@@ -29,4 +29,3 @@
         <i class="bi bi-arrow-right-circle"></i>
     </button>
 </form>
-<!-- <h6 class="card-text text-body-secondary">| CAMBIAR CONTRASEÑA |</h6> -->

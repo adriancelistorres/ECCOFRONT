@@ -5,15 +5,23 @@ import { NotFoundComponent } from './intranet/shared/not-found/not-found.compone
 const routes: Routes = [
   { path: '', pathMatch: 'full', redirectTo: '' },
   { 
-    path: '', 
+    path: '', //INICIO
     loadChildren: () => import('./intranet/modules/starts/starts.module').then(m => m.StartsModule)
   },
   {
-    path: 'auth',
+    path: 'authIn',//INCENTIVOS
+    loadChildren: () => import('./incentives/modules/authentication/authentication.module').then(m => m.AuthenticationModule)
+  },
+  {
+    path: 'mainIn',//PRINCIPAL DE INCENTIVOS
+    loadChildren: () => import('./incentives/modules/main/main.module').then(m => m.MainModule)
+  },
+  {
+    path: 'auth',//INTRANET
     loadChildren: () => import('./intranet/modules/authentication/authentication.module').then(m => m.AuthenticationModule)
   },
   {
-    path: 'main',
+    path: 'main',//PRINCIPAL DE INTRANET
     loadChildren: () => import('./intranet/modules/main/main.module').then(m => m.MainModule)
   },
   {

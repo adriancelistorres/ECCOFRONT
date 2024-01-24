@@ -46,7 +46,7 @@
     --bs-danger: #d9534f;
     --bs-light: #fff;
     --bs-dark: #343a40;
-    --bs-primary-rgb: 26, 26, 26;
+    --bs-primary-rgb: 0, 0, 100;
     --bs-secondary-rgb: 255, 255, 255;
     --bs-success-rgb: 75, 191, 115;
     --bs-info-rgb: 31, 155, 207;
@@ -9067,7 +9067,7 @@ fieldset:disabled .btn {
 }
 
 .fw-bold {
-    font-weight: 600 !important
+    font-weight: bold !important
 }
 
 .fw-bolder {

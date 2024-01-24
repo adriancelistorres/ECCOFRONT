@@ -15,7 +15,7 @@ export class StartComponent {
   }
 
   logInIncentives(){
-    //this.router.navigate(['/admin/tableros/dashboard']);
+    this.router.navigate(['authIn']);
   }
 
   logInIntranet(){
