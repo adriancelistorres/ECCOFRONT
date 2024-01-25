@@ -107,20 +107,17 @@ export class IncentivesComponent {
 
   getBackgroundStyles(empresa: string): any {
     if (empresa === 'ROM') {
-      return { 'background-color': '#ff455c', 'color': '#fff', 'padding': '8px'};
+      return { 'background-color': '#ff455c', 'color': 'white', 'padding': '8px'};
     } else if (empresa === 'OPPO') {
-      return { 'background-color': 'chocolate', 'padding': '8px'};
+      return { 'background-color': 'chocolate', 'color': 'white', 'padding': '8px'};
     } else if (empresa === 'ENTEL') {
-      return { 'background-color': 'deepskyblue', 'padding': '8px'}; 
+      return { 'background-color': 'deepskyblue', 'color': 'black', 'padding': '8px'}; 
     }else if (empresa === 'RENO') {
-      return { 'background-color': 'chartreuse', 'padding': '8px'}; 
-    }
-    else if (empresa === 'HONOR') {
-      return { 'background-color': 'aquamarine', 'padding': '8px'}; 
-    } 
-    else{
-      return { 'background-color': 'antiquewhite', 'padding-top': '5px', 'padding-bottom': '5px','padding-right': '10px'  }; 
-
+      return { 'background-color': 'chartreuse', 'color': 'black', 'padding': '8px'}; 
+    }else if (empresa === 'HONOR') {
+      return { 'background-color': 'aquamarine', 'color': 'black', 'padding': '8px'}; 
+    }else{
+      return { 'background-color': 'antiquewhite', 'color': 'black', 'padding': '8px'};
     }
    
   }
