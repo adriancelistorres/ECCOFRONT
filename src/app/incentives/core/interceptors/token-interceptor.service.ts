@@ -7,13 +7,19 @@ import { HttpHeaders } from '@angular/common/http';
 export class TokenInterceptorService {
 
   interceptor() {
-    const token:any = localStorage.getItem('token'); // Obtener el token del localStorage
- 
 
-    return {
-      headers: new HttpHeaders({
-        Authorization: `Bearer ${token}`,
-      }),
-    };
+    if (typeof localStorage !== 'undefined') {
+
+      const token: any = localStorage.getItem('token'); // Obtener el token del localStorage
+
+      return {
+        headers: new HttpHeaders({
+          Authorization: `Bearer ${token}`,
+        }),
+      };
+    } else {
+      console.log('')
+      return {}
+    }
   }
 }

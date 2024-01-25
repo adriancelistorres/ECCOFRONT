@@ -50,6 +50,8 @@ export class IncentivesComponent {
     this.getIncentivos();
     // this.calculateTotals(); // Llama a la función para calcular los totales
   }
+  
+  
 
   getIncentivos(): void {
     // this.calcularTiposIncentivos();
@@ -105,16 +107,16 @@ export class IncentivesComponent {
 
   getBackgroundStyles(empresa: string): any {
     if (empresa === 'ROM') {
-      return { 'background-color': '#ff455c', 'padding-top': '5px', 'padding-bottom': '5px' ,'padding-right': '20px'   };
+      return { 'background-color': '#ff455c', 'color': '#fff', 'padding': '8px'};
     } else if (empresa === 'OPPO') {
-      return { 'background-color': 'chocolate', 'padding-top': '5px', 'padding-bottom': '5px' ,'padding-right': '10px'  };
+      return { 'background-color': 'chocolate', 'padding': '8px'};
     } else if (empresa === 'ENTEL') {
-      return { 'background-color': 'deepskyblue' , 'padding-top': '5px', 'padding-bottom': '5px' ,'padding-right': '10px' }; 
+      return { 'background-color': 'deepskyblue', 'padding': '8px'}; 
     }else if (empresa === 'RENO') {
-      return { 'background-color': 'chartreuse', 'padding-top': '5px', 'padding-bottom': '5px' ,'padding-right': '10px'  }; 
+      return { 'background-color': 'chartreuse', 'padding': '8px'}; 
     }
     else if (empresa === 'HONOR') {
-      return { 'background-color': 'aquamarine', 'padding-top': '5px', 'padding-bottom': '5px','padding-right': '10px'      }; 
+      return { 'background-color': 'aquamarine', 'padding': '8px'}; 
     } 
     else{
       return { 'background-color': 'antiquewhite', 'padding-top': '5px', 'padding-bottom': '5px','padding-right': '10px'  }; 
