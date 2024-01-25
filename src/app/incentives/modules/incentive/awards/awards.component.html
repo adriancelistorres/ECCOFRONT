@@ -2,63 +2,63 @@
     <div class="background-container" style="padding-top: 30px;">
         <div class="">
             <h2 class="card-title fw-bold m-3">Tabla de Artefactos</h2>
-            <div class="container-fluid">
+            <div class="">
                 <div class="">
                     <div class="table-responsive fs-6">
-                        <table class="table table-dark table-hover table-bordered" style="white-space: nowrap; overflow-x: auto;">
+                        <table class="table table-dark table-hover table-bordered border-secondary" >
                             <thead class="table table-active">
                                 <tr style="border-color: aliceblue">
-                                    <th>
+                                    <th >
                                         ID
                                     </th>
-                                    <th>
+                                    <th >
                                         Tipo Incentivo
                                     </th>
-                                    <th>
+                                    <th >
                                         Periodo
                                     </th>
-                                    <th>
+                                    <th >
                                         DNI Promotor
                                     </th>
-                                    <th>
+                                    <th >
                                         Nombre Promotor
                                     </th>
-                                    <th>
+                                    <th >
                                         PDV Incentivo
                                     </th>
-                                    <th>
+                                    <th >
                                         Nombre Incentivo
                                     </th>
-                                    <th>
+                                    <th >
                                         Vigencia incentivo
                                     </th>
-                                    <th>
+                                    <th >
                                         Premio
                                     </th>
-                                    <th>
+                                    <th >
                                         Estado Incentivo
                                     </th>
-                                    <th>
+                                    <th >
                                         Aceptar
                                     </th>
                                 </tr>
                             </thead>
                             <tbody>
                                 <tr *ngFor="let incentivo of listIncentivos">
-                                    <td>{{ incentivo.id }}</td>
-                                    <td>{{ incentivo.empresa }}</td>
-                                    <td>{{ incentivo.periodoIncentivo }}</td>
-                                    <td>{{ incentivo.dniPromotor }}</td>
-                                    <td>{{ incentivo.nombreCompleto }}</td>
-                                    <td>{{ incentivo.puntoventa }}</td>
-                                    <td>{{ incentivo.nombreIncentivo }}</td>
-                                    <td>
+                                    <td >{{ incentivo.id }}</td>
+                                    <td >{{ incentivo.empresa }}</td>
+                                    <td >{{ incentivo.periodoIncentivo }}</td>
+                                    <td >{{ incentivo.dniPromotor }}</td>
+                                    <td >{{ incentivo.nombreCompleto }}</td>
+                                    <td >{{ incentivo.puntoventa }}</td>
+                                    <td >{{ incentivo.nombreIncentivo }}</td>
+                                    <td >
                                         Del {{ incentivo.fechaInicio | date : "dd/MM/yyyy" }} al
                                         {{ incentivo.fechaFin | date : "dd/MM/yyyy" }}
                                     </td>
-                                    <td>{{ incentivo.premio }}</td>
-                                    <td>{{ incentivo.estadoIncentivo }}</td>
-                                    <td>
+                                    <td >{{ incentivo.premio }}</td>
+                                    <td >{{ incentivo.estadoIncentivo }}</td>
+                                    <td >
                                         <button type="button" class="btn btn-success" (click)="onAceptar(incentivo)"
                                             [disabled]="incentivo.aceptado">
                                             Aceptar
