@@ -331,6 +331,7 @@ export class IncentivesComponent {
   //   }
   // }
   checkTokenExpiration(): void {
+    if (typeof localStorage !== 'undefined') {
     const token = localStorage.getItem('token'); // Obtener el token del localStorage
   
     if (!token) {
@@ -372,8 +373,13 @@ export class IncentivesComponent {
         clearTimeout(timeout);
       });
     }
+    } else {
+      console.log('')
+    }
   }
   
+
+
   showSessionExpiredAlert(): void {
     Swal.fire({
       title: '¡Sesión expirada!',
@@ -386,7 +392,12 @@ export class IncentivesComponent {
   }
 
   cerrarSesion(): void {
-    localStorage.removeItem('token');
+    if (typeof localStorage !== 'undefined') {
+      localStorage.removeItem('token');
+
+    }  else {
+      console.log('')
+    }
     this._router.navigate(['authIn']);
   }
 

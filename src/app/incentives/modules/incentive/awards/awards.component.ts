@@ -184,6 +184,8 @@ export class AwardsComponent {
   //   }
   // }
   checkTokenExpiration(): void {
+
+    if (typeof localStorage !== 'undefined') {
     const token = localStorage.getItem('token'); // Obtener el token del localStorage
   
     if (!token) {
@@ -225,7 +227,13 @@ export class AwardsComponent {
         clearTimeout(timeout);
       });
     }
+    }  else {
+      console.log('')
+    }
   }
+
+
+
   showSessionExpiredAlert(): void {
     Swal.fire({
       title: '¡Sesión expirada!',

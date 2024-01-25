@@ -25,7 +25,11 @@ export class LoginOneComponent {
   }
 
   ngOnInit(): void {
+    if (typeof localStorage !== 'undefined') {
     localStorage.removeItem('token'); // Borra el token al cargar la página del inicio de sesión
+    } else {
+      console.log('')
+    }
   }
 
   testt(){
