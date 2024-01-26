@@ -15,7 +15,8 @@ export class LoginOneComponent {
   usuario: string = ''; // Variable para capturar el usuario
   clave: string = '';   // Variable para capturar la contraseña
   isLoading: boolean = false;
-  
+  showPassword: boolean = false;
+
   constructor(
     private _incentivosServices: IncentivesService,
     private _router: Router,
@@ -34,6 +35,10 @@ export class LoginOneComponent {
 
   testt(){
     this._router.navigate(['mainIn']);
+  }
+
+  togglePasswordVisibility() {
+    this.showPassword = !this.showPassword;
   }
 
   login(event: Event): void {

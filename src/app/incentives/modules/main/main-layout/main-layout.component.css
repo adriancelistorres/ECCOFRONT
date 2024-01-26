@@ -1,0 +1,13 @@
+.btn-custom {
+    background-color: #ff455c;
+    color: #fff; /* Cambia el color del texto si es necesario */
+    padding: 10px 20px; /* Ajusta el relleno según tus necesidades */
+    transition: background-color 0.3s, border-color 0.3s, color 0.3s; /* Agrega transiciones suaves */
+}
+
+.btn-custom:hover {
+    border:solid;
+    background-color: #eb344a; /* Cambia el color de fondo al pasar el mouse */
+    border-color: #382e2e; /* Cambia el color del borde al pasar el mouse */
+    color: #fff; /* Cambia el color del texto al pasar el mouse, si es necesario */
+}

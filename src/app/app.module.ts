@@ -5,6 +5,8 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { NotFoundComponent } from './intranet/shared/not-found/not-found.component';
 import { ToastrModule } from 'ngx-toastr';
+import { provideHttpClient, withFetch } from '@angular/common/http';
+import { appConfig } from './config/app.config';
 
 @NgModule({
   declarations: [
@@ -22,6 +24,7 @@ import { ToastrModule } from 'ngx-toastr';
     })
   ],
   providers: [
+    provideHttpClient(withFetch()),
     provideClientHydration()
   ],
   bootstrap: [AppComponent]
