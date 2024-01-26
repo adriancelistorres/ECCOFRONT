@@ -7,7 +7,8 @@ export const environment = {
   // endpoint: 'https://intranet.grupotawa.com/incentivosrom/',
   // endpoint: 'https://localhost:7117/',
   //endpoint: 'https://localhost:7169/',
-  endpoint: 'http://localhost/rombiBack/',
+  // endpoint: 'http://localhost/RomBIBack/',
+  endpoint: 'https://intranet.grupotawa.com/RomBIBack/',
 };
 
 
