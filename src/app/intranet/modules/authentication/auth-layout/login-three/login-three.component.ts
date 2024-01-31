@@ -3,21 +3,21 @@ import { Validators, FormGroup, FormControl } from '@angular/forms';
 import { Router } from '@angular/router';
 
 @Component({
-  selector: 'app-login-two',
-  templateUrl: './login-two.component.html',
-  styleUrl: './login-two.component.css'
+  selector: 'app-login-three',
+  templateUrl: './login-three.component.html',
+  styleUrl: './login-three.component.css'
 })
-export class LoginTwoComponent {
+export class LoginThreeComponent {
   loginForm: FormGroup;
 
   constructor(
     private router: Router
   ){
     this.loginForm = new FormGroup({
-      'username': new FormControl('', Validators.compose([
+      'country': new FormControl('', Validators.compose([
         Validators.required,
       ])),
-      'password': new FormControl('', Validators.compose([
+      'type': new FormControl('', Validators.compose([
         Validators.required
       ]))
     });
@@ -26,5 +26,4 @@ export class LoginTwoComponent {
   getLogin(){
     this.router.navigate(['main']);
   }
-
 }

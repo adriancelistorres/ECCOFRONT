@@ -3,12 +3,13 @@ import { Validators, FormGroup, FormControl } from '@angular/forms';
 import { Router } from '@angular/router';
 
 @Component({
-  selector: 'app-login',
-  templateUrl: './login.component.html',
-  styleUrl: './login.component.css'
+  selector: 'app-login-two',
+  templateUrl: './login-two.component.html',
+  styleUrl: './login-two.component.css'
 })
-export class LoginComponent {
+export class LoginTwoComponent {
   loginForm: FormGroup;
+  showPassword: boolean = false;
 
   constructor(
     private router: Router
@@ -24,6 +25,11 @@ export class LoginComponent {
   }
 
   getLogin(){
-    this.router.navigate(['main']);
+    this.router.navigate(['/auth/loginThree']);
   }
+
+  togglePasswordVisibility() {
+    this.showPassword = !this.showPassword;
+  }
+
 }
