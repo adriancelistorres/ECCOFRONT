@@ -2,30 +2,172 @@
 <router-outlet></router-outlet> -->
 <div>
 
-    <nav class="navbar bg-primary">
+    <nav class="navbar bg-primary" style="padding-top: 14px;
+    padding-bottom: 14px;">
         <div class="container-fluid">
-            <img src="assets/img/Rom/ROM_sobre azul.png" class="img-fluid" style="max-height: 30px;padding-left: 50px;">
+            <img src="assets/img/Rom/ROM_sobre azul.png" class="img-fluid" style="max-height: 40px;padding-left: 30px;">
+            <div style="padding-right: 30px;">
+                <div class="btn-group" style="max-height:50px">
+                    <div class="dropdown" data-bs-theme="dark">
+                        <button class="btn btn-primary dropdown-toggle" type="button" id="dropdownMenuButtonDark"
+                            data-bs-toggle="dropdown" aria-expanded="false">
+                            <img src="assets/img/avatar.jpg" class="img-fluid rounded-5"
+                                style="max-height: 30px; margin-right: 8px;">
+                            Ricardo solis
+                        </button>
+                        <ul class="dropdown-menu" aria-labelledby="dropdownMenuButtonDark">
+                            <li><a class="dropdown-item fw-bold text-uppercase" href="#">Mi Perfil</a></li>
+                            <li><a class="dropdown-item fw-bold text-uppercase" href="#">Cambiar Contraseña</a></li>
+                        </ul>
+                    </div>
+                    <!-- <button class="btn btn-primary">
+                    <img src="assets/img/avatar.jpg" class="img-fluid rounded-5" style="max-height: 40px;">
+                    Ricardo solis
+                </button> -->
+                    <button class="btn btn-danger rounded-right">
+                        <i class="bi bi-box-arrow-right" style="font-size: 1.5rem"></i>
+                    </button>
+                </div>
+            </div>
         </div>
     </nav>
 
     <div class="row p-3">
-        <div class="col-sm-3 mb-3 mb-sm-0">
-            <div class="card">
+        <div class="col-3">
+            <div class="card text-bg-danger border-0 position-relative">
                 <div class="card-body">
-                    <h5 class="card-title">Special title treatment</h5>
-                    <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
-                    <a href="#" class="btn btn-primary">Go somewhere</a>
+                    <div class="d-grid gap-2">
+                        <button class="btn text-bg-danger rounded-0 text-uppercase text-start" type="button">
+                            <i class="bi bi-list-check" style="font-size: 1rem;padding-right: 4px;"></i>
+                            Planificacion horarios
+                        </button>
+                        <button class="btn text-bg-danger rounded-0 text-uppercase text-start" type="button">
+                            <i class="bi bi-check-all" style="font-size: 1rem;padding-right: 4px;"></i>
+                            Marcacion manual
+                        </button>
+                        <button class="btn text-bg-danger rounded-0 text-uppercase text-start" type="button">
+                            <i class="bi bi-search" style="font-size: 1rem;padding-right: 4px;"></i>
+                            Busqueda IMEIS
+                        </button>
+                        <button class="btn text-bg-danger rounded-0 text-uppercase text-start" type="button">
+                            <i class="bi bi-gear-wide-connected" style="font-size: 1rem;padding-right: 4px;"></i>
+                            Mantenimientos
+                        </button>
+                        <button class="btn text-bg-danger rounded-0 text-uppercase text-start" type="button">
+                            <i class="bi bi-person-gear" style="font-size: 1rem;padding-right: 4px;"></i>
+                            Permisos
+                        </button>
+                        <div class="dropdown">
+                            <button class=" btn btn-primary rounded-0 text-uppercase text-start dropdown-toggle" type="button" data-bs-toggle="dropdown"  data-bs-popper="static"
+                                aria-expanded="false">
+                                Dropdown button
+                            </button>
+                            <ul class="dropdown-menu dropdown-menu-dark">
+                                <li><a class="dropdown-item active" href="#">Action</a></li>
+                                <li><a class="dropdown-item" href="#">Another action</a></li>
+                                <li><a class="dropdown-item" href="#">Something else here</a></li>
+                                <li>
+                                    <hr class="dropdown-divider">
+                                </li>
+                                <li><a class="dropdown-item" href="#">Separated link</a></li>
+                            </ul>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
-        <div class="col-sm-9">
-            <div class="card">
+        <div class="col-9">
+            <div class="container-fluid mt-4">
+                <nav style="--bs-breadcrumb-divider: '>';" aria-label="breadcrumb">
+                    <ol class="breadcrumb">
+                        <li class="breadcrumb-item"><a href="" class="text-decoration-none">Planificacion de
+                                Horarios</a></li>
+                        <li class="breadcrumb-item active" aria-current="page">Listar</li>
+                    </ol>
+                </nav>
+            </div>
+            <div class="card border-dark border-2 p-2">
                 <div class="card-body">
-                    <h5 class="card-title">Special title treatment</h5>
-                    <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
-                    <a href="#" class="btn btn-primary">Go somewhere</a>
+                    <h5 class="card-title text-uppercase">Planificacion de horarios</h5>
+                    <div class="row">
+                        <div class="col-3">
+                            <select class="form-select" aria-label="Default select example">
+                                <option selected>Open this select menu</option>
+                                <option value="1">One</option>
+                                <option value="2">Two</option>
+                                <option value="3">Three</option>
+                            </select>
+                        </div>
+                        <div class="col-3">
+                            <select class="form-select" aria-label="Default select example">
+                                <option selected>Open this select menu</option>
+                                <option value="1">One</option>
+                                <option value="2">Two</option>
+                                <option value="3">Three</option>
+                            </select>
+                        </div>
+                        <div class="col-3">
+                            <select class="form-select" aria-label="Default select example">
+                                <option selected>Open this select menu</option>
+                                <option value="1">One</option>
+                                <option value="2">Two</option>
+                                <option value="3">Three</option>
+                            </select>
+                        </div>
+                        <div class="col-3">
+                            <select class="form-select" aria-label="Default select example">
+                                <option selected>Open this select menu</option>
+                                <option value="1">One</option>
+                                <option value="2">Two</option>
+                                <option value="3">Three</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="d-grid gap-2 d-md-block justify-content-end">
+                        <button class="btn btn-primary m-2" type="button">Nuevo</button>
+                        <button class="btn btn-primary" type="button">Buscar</button>
+                    </div>
+                    <div class="mt-4">
+                        <table class="table table-dark table-bordered rounded-2">
+                            <thead class="table-light">
+                                <tr>
+                                    <th scope="col">#</th>
+                                    <th scope="col">First</th>
+                                    <th scope="col">Last</th>
+                                    <th scope="col">Handle</th>
+                                    <th scope="col">Last</th>
+                                    <th scope="col">Handle</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <th scope="row">1</th>
+                                    <td>Mark</td>
+                                    <td>Otto</td>
+                                    <td>mdo</td>
+                                    <td>mdo</td>
+                                    <td>mdo</td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">2</th>
+                                    <td>Jacob</td>
+                                    <td>Thornton</td>
+                                    <td>fat</td>
+                                    <td>fat</td>
+                                    <td>fat</td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">3</th>
+                                    <td colspan="2">Larry the Bird</td>
+                                    <td>twitter</td>
+                                    <td>twitter</td>
+                                    <td>twitter</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+
                 </div>
             </div>
         </div>
     </div>
-</div>
