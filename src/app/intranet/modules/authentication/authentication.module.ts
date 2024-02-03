@@ -6,6 +6,7 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { LoginOneComponent } from './auth-layout/login-one/login-one.component';
 import { LoginTwoComponent } from './auth-layout/login-two/login-two.component';
 import { LoginThreeComponent } from './auth-layout/login-three/login-three.component';
+// import { CookieService } from 'ngx-cookie-service';
 
 
 
@@ -16,6 +17,9 @@ import { LoginThreeComponent } from './auth-layout/login-three/login-three.compo
     AuthenticationRoutingModule,
     FormsModule,
     ReactiveFormsModule
-  ]
+  ],
+  // providers: [
+  //   CookieService
+  // ]
 })
 export class AuthenticationModule { }

@@ -5,8 +5,10 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { NotFoundComponent } from './intranet/shared/not-found/not-found.component';
 import { ToastrModule } from 'ngx-toastr';
-import { provideHttpClient, withFetch } from '@angular/common/http';
+import { HTTP_INTERCEPTORS, provideHttpClient, withFetch } from '@angular/common/http';
 import { appConfig } from './config/app.config';
+import { CookieService } from 'ngx-cookie-service';
+import { jwtInterceptor } from './intranet/core/interceptors/jwt-interceptor.interceptor';
 
 @NgModule({
   declarations: [
@@ -25,7 +27,13 @@ import { appConfig } from './config/app.config';
   ],
   providers: [
     provideHttpClient(withFetch()),
-    provideClientHydration()
+    provideClientHydration(),
+    CookieService,
+    // {
+    //   provide: HTTP_INTERCEPTORS,
+    //   useValue: jwtInterceptor,
+    //   multi: true
+    // }
   ],
   bootstrap: [AppComponent]
 })

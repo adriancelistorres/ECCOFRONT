@@ -1,6 +1,33 @@
 <h5 class="card-title p-3">Selecciona País y Tipo</h5>
 <form [formGroup]="loginForm" (ngSubmit)="getLogin()">
-    <div class="row mb-3">
+    <div class="mb-3">
+        <div class="input-group">
+            <span class="input-group-text" id="basic-addon3"><i class="bi bi-map"></i></span>
+            <select class="form-select" formControlName="country">
+                <option value="">Seleccionar País</option>
+                <option value="1">Perú</option>
+                <option value="2">Chile</option>
+            </select>
+        </div>
+        <div class="form-text text-danger" id="basic-addon4" *ngIf="loginForm.get('country')?.hasError('required')">
+            Country is required
+        </div>
+    </div>
+    <div class="mb-3">
+        <div class="input-group">
+            <span class="input-group-text" id="basic-addon3"><i class="bi bi-signpost-split"></i></span>
+            <select class="form-select" formControlName="type">
+                <option value="">Seleccionar Tipo Usuario</option>
+                <option value="1">Socio</option>
+                <option value="2">Colaborador</option>
+            </select>
+        </div>
+        <div class="form-text text-danger" id="basic-addon4" *ngIf="loginForm.get('type')?.hasError('required')">
+            type is required
+        </div>
+    </div>
+
+    <!-- <div class="row mb-3">
         <div class="input-group">
             <div class="input-group-text">
                 <i class="bi bi-map"></i>
@@ -11,8 +38,8 @@
                 <option value="2">Chile</option>
             </select>
         </div>
-    </div>
-    <div class="row mb-3">
+    </div> -->
+    <!-- <div class="row mb-3">
         <div class="input-group">
             <div class="input-group-text">
                 <i class="bi bi-signpost-split"></i>
@@ -23,7 +50,7 @@
                 <option value="2">Colaborador</option>
             </select>
         </div>
-    </div>
+    </div> -->
     <button type="submit" class="btn btn-primary m-3">
         Siguiente
         <i class="bi bi-arrow-right-circle"></i>
