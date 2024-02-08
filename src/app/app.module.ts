@@ -7,6 +7,7 @@ import { NotFoundComponent } from './intranet/shared/not-found/not-found.compone
 import { ToastrModule } from 'ngx-toastr';
 import { provideHttpClient, withFetch } from '@angular/common/http';
 import { appConfig } from './config/app.config';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 @NgModule({
   declarations: [
@@ -15,6 +16,7 @@ import { appConfig } from './config/app.config';
   ],
   imports: [
     BrowserModule,
+    BrowserAnimationsModule,
     AppRoutingModule,
     ToastrModule.forRoot({
       timeOut: 4000,

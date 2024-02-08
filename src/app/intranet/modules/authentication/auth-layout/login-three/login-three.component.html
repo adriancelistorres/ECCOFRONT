@@ -1,0 +1,30 @@
+<h5 class="card-title p-3">Selecciona Negocio y Cuenta</h5>
+<form [formGroup]="loginForm" (ngSubmit)="getLogin()">
+    <div class="row mb-3">
+        <div class="input-group">
+            <div class="input-group-text">
+                <i class="bi bi-briefcase"></i>
+            </div>
+            <select class="form-select" formControlName="country">
+                <option value="">Seleccionar Negocio</option>
+                <option value="1">Canal Tiendas</option>
+                <option value="2">Canal Retail</option>
+            </select>
+        </div>
+    </div>
+    <div class="row mb-3">
+        <div class="input-group">
+            <div class="input-group-text">
+                <i class="bi bi-person-vcard"></i>
+            </div>
+            <select class="form-select" formControlName="type">
+                <option value="">Seleccionar Cuenta</option>
+                <option value="1">Entel TPF</option>
+            </select>
+        </div>
+    </div>
+    <button type="submit" class="btn btn-primary m-3">
+        Siguiente
+        <i class="bi bi-arrow-right-circle"></i>
+    </button>
+</form>

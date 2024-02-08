@@ -6,5 +6,9 @@ import { Component } from '@angular/core';
   styleUrl: './main-layout.component.css'
 })
 export class MainLayoutComponent {
-  
+  nombreNegocio: string
+
+  constructor(){
+    this.nombreNegocio="ROMBI"
+  }
 }
