@@ -4,7 +4,7 @@ import { MainLayoutComponent } from './main-layout/main-layout.component';
 import { MainStartComponent } from './main-layout/main-start/main-start.component';
 
 const routes: Routes = [
-  { path: '', pathMatch: 'full', redirectTo: '' },
+  // { path: '', pathMatch: 'full', redirectTo: '' },
   {
     path: '',
     component: MainLayoutComponent,
