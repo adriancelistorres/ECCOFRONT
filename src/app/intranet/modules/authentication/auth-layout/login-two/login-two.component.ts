@@ -4,6 +4,7 @@ import { Router } from '@angular/router';
 import { CookieService } from 'ngx-cookie-service';
 import { AuthService } from '../../../../services/auth.service';
 import { SecurityService } from '../../../../services/security.service';
+import { Country } from '../../../../models/Auth/country';
 
 @Component({
   selector: 'app-login-two',
@@ -13,6 +14,7 @@ import { SecurityService } from '../../../../services/security.service';
 export class LoginTwoComponent implements OnInit {
   loginForm: UntypedFormGroup;
   showPassword: boolean = false;
+  listCountry: Country[] = [];
 
   constructor(
     private router: Router,
@@ -26,7 +28,7 @@ export class LoginTwoComponent implements OnInit {
 
   ngOnInit(): void {
     //this.formLogin();
-    // this.getCountry();
+    this.getCountry();
   }
 
   // getCountry(){
@@ -38,6 +40,9 @@ export class LoginTwoComponent implements OnInit {
 
   createFormLogin(): UntypedFormGroup{
     return this.fb.group({
+      country: new FormControl("", Validators.compose([
+        Validators.required,
+      ])),
       username: new FormControl('', Validators.compose([
         Validators.required,
       ])),
@@ -60,17 +65,25 @@ export class LoginTwoComponent implements OnInit {
   getLogin(){
     console.log(this.loginForm.getRawValue());
     
-    this.securityService.authentication().subscribe(res => {
-      console.log(res.token);
-      console.log(res.expirationDate);
-      //this.cookieService.set('token', res.token);
-      this.router.navigate(['/auth/loginThree']);
-    })
+    // this.securityService.authentication().subscribe(res => {
+    //   console.log(res.token);
+    //   console.log(res.expirationDate);
+    //   //this.cookieService.set('token', res.token);
+    //   this.router.navigate(['/auth/loginThree']);
+    // })
     
   }
 
   togglePasswordVisibility() {
     this.showPassword = !this.showPassword;
+  }
+
+  getCountry(){
+    this.authService.getCountry().subscribe((res) => {
+      //console.log(res);
+      this.listCountry = res;
+      console.log(this.listCountry);
+    });
   }
 
 }

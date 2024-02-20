@@ -13,6 +13,19 @@
     </div> -->
     <div class="mb-3">
         <div class="input-group">
+            <span class="input-group-text" id="basic-addon3"><i class="bi bi-map"></i></span>
+            <select class="form-select" formControlName="country">
+                <option value="">Seleccionar País</option>
+                <option *ngFor="let country of listCountry" [value]="country.COD_PAIS">
+                    {{country.DESCRIPCION}}</option>
+            </select>
+        </div>
+        <div class="form-text text-danger" id="basic-addon4" *ngIf="loginForm.get('country')?.hasError('required')">
+            Country is required
+        </div>
+    </div>
+    <div class="mb-3">
+        <div class="input-group">
             <span class="input-group-text" id="basic-addon3"><i class="bi bi-person"></i></span>
             <input type="text" class="form-control" formControlName="username" placeholder="Username" />
         </div>

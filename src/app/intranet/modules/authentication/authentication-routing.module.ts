@@ -6,7 +6,7 @@ import { AuthLayoutComponent } from './auth-layout/auth-layout.component';
 import { LoginThreeComponent } from './auth-layout/login-three/login-three.component';
 
 const routes: Routes = [
-  { path: '', pathMatch: 'full', redirectTo: 'loginOne' },
+  { path: '', pathMatch: 'full', redirectTo: 'loginTwo' },
   {
     path: '',
     component: AuthLayoutComponent,
